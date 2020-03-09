@@ -7,6 +7,22 @@ Fontos tudnunk, ha az ESP-01 microvezérlőt használjuk, nem működik a soros 
 from s import*
 kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 ```
+> A megjelenítés legegyszerűbb módja
+
+```python
+from s import*
+import time
+t = sleep_ms(250)
+kiir('00011000'); t
+kiir('00100100'); t
+kiir('01000010'); t
+kiir('10000001'); t
+kiir('01000010'); t
+kiir('00100100'); t
+kiir('00011000'); t
+kiir('00000000'); t
+```
+
 > bitek görgetése előre vagy hátra
 
 ```python
@@ -16,14 +32,14 @@ gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés széma, 350 ms késlelt
 
 ```python
 from s import*
-kiir('10000000')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
+kiir('10000000')
 gorget('E',8,350) # 'E'-előre, 8-léptetés, 350 ms késleltetéssel
 ```
 > 1 bit hátra görgetése
 
 ```python
 from s import*
-kiir('00000001')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
+kiir('00000001')
 gorget('H',8,350) # 'H'-előre, 8-léptetés, 350 ms késleltetéssel
 ```
 A shift register amikor előre lépkedünk, 8. bit után túlcsordul (ha egy shift register-t használunk). Az s.py modult úgy írtam meg, hogy visszafelé is ezt imitálja, vagyis hátrafelé is túlcsordul. A következő példában illusztrálom ezt.
