@@ -26,3 +26,17 @@ from s import*
 kiir('00000001')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 gorget('H',8,350) # 'H'-előre, 8-léptetés, 350 ms késleltetéssel
 ```
+A shift register amikor előre lépkedünk, 8. bit után túlcsordul. Az s.py modult úgy írtam meg, hogy visszafelé is ezt imitálja le, vagyis hátrafelé is túlcsordul.
+
+> Lögdössük ki a biteket
+
+```python
+from s import*
+kiir('11111111')    # '1'-bekapcsolt állapot
+for i in range(9):  # felváltva lépked előre hátra és lögdösi ki a bit-ket
+  if i % 2 == 0:
+    x = 'E'
+  elif i % 2 != 0:
+    x = 'H'
+  gorget(x,i,250)
+```
