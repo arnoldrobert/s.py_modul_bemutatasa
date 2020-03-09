@@ -12,7 +12,7 @@ kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 ```python
 from s import*
 import time
-t = sleep_ms(250)
+t = time.sleep_ms(250)
 kiir('00011000'); t
 kiir('00100100'); t
 kiir('01000010'); t
