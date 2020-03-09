@@ -6,6 +6,10 @@ Fontos tudnunk, ha az ESP-01 microvezérlőt használjuk, nem működik a soros 
 ```python
 from s import*
 kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
+```
+> bitek görgetése előre vagy hátra
+
+```python
 gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés, 350 ms késleltetéssel
 ```
 > 1 bit előre görgetése
