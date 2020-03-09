@@ -1,10 +1,24 @@
 # s.py_modul_bemutatása
-Fontos tudnunk, ha az ESP-01 microvezérlőt használjuk, nem működik a soros kommunikáció, mivel a Tx lábát is kimenetnek használja. Csak a WebREPL-ben programozható. A többi nagyobb mikrovezérlőnél a soros kommunikációt is tudjuk használni.
+Fontos tudnunk, ha az ESP-01 microvezérlőt használjuk, nem működik a soros kommunikáció, mivel a Tx lábát is kimenetnek használja. Csak a WebREPL-ben programozható. A többi nagyobb mikrovezérlőnél a soros kommunikációt is tudjuk használni. A s.py modul támogatja a több shift register sorbakötését is.
 
 > 8 bit ki/be kapcsolása
 
 ```python
 from s import*
-kiir('10101010')  # '0'-kikapcsolt állapot, '1'-bekapcsolt állapot
+kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés, 350 ms késleltetéssel
+```
+> 1 bit végig görgetése
+
+```python
+from s import*
+kiir('10000000')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
+gorget('E',8,350) # 'E'-előre, 8-léptetés, 350 ms késleltetéssel
+```
+> 1 bit vissza görgetése
+
+```python
+from s import*
+kiir('00000001')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
+gorget('H',8,350) # 'H'-előre, 8-léptetés, 350 ms késleltetéssel
 ```
