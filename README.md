@@ -1,1 +1,1 @@
-# s.py_modul_bemutat-sa
+# s.py_modul_bemutatása
