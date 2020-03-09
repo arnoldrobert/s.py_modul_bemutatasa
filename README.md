@@ -23,7 +23,7 @@ kiir('00011000'); t
 kiir('00000000'); t
 ```
 
-> bitek görgetése előre vagy hátra
+> Bitek görgetése előre vagy hátra
 
 ```python
 gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés széma, 350 ms késleltetés
