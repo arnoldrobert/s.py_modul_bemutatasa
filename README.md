@@ -8,14 +8,14 @@ from s import*
 kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés, 350 ms késleltetéssel
 ```
-> 1 bit végig görgetése
+> 1 bit előre görgetése
 
 ```python
 from s import*
 kiir('10000000')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 gorget('E',8,350) # 'E'-előre, 8-léptetés, 350 ms késleltetéssel
 ```
-> 1 bit vissza görgetése
+> 1 bit hátra görgetése
 
 ```python
 from s import*
