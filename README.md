@@ -10,7 +10,7 @@ kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 > bitek görgetése előre vagy hátra
 
 ```python
-gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés, 350 ms késleltetéssel
+gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés széma, 350 ms késleltetés
 ```
 > 1 bit előre görgetése
 
