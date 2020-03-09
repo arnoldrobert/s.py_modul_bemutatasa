@@ -7,7 +7,7 @@ Fontos tudnunk, ha az ESP-01 microvezérlőt használjuk, nem működik a soros 
 from s import*
 kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 ```
-> A megjelenítés legegyszerűbb módja
+> A megjelenítés legegyszerűbb módja (a ctrl+E segitségével több parancssort tudunk egyszerre bemásolni a WebREPL-be)
 
 ```python
 from s import*
