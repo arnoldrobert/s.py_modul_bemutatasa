@@ -11,16 +11,15 @@ kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 
 ```python
 from s import*
-import time
-t = time.sleep_ms(250)
-kiir('00011000'); t
-kiir('00100100'); t
-kiir('01000010'); t
-kiir('10000001'); t
-kiir('01000010'); t
-kiir('00100100'); t
-kiir('00011000'); t
-kiir('00000000'); t
+from time import*
+kiir('00011000');sleep_ms(250)
+kiir('00100100');sleep_ms(250)
+kiir('01000010');sleep_ms(250)
+kiir('10000001');sleep_ms(250)
+kiir('01000010');sleep_ms(250)
+kiir('00100100');sleep_ms(250)
+kiir('00011000');sleep_ms(250)
+kiir('00000000')
 ```
 
 > Bitek görgetése előre vagy hátra
