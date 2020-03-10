@@ -1,5 +1,5 @@
 # s.py_modul_bemutatása
-Fontos tudnunk, ha az ESP-01 microvezérlőt használjuk, nem működik a soros kommunikáció, mivel a Tx lábát is kimenetnek használja. Csak a WebREPL-ben programozható. A többi nagyobb mikrovezérlőnél a soros kommunikációt is tudjuk használni. A s.py modul támogatja a több shift register sorbakötését is.
+Fontos tudnunk, ha az ESP-01 microvezérlőt használjuk, nem működik a soros kommunikáció, mivel a Tx lábát is kimenetnek használja. Csak a WebREPL-ben programozható. A többi nagyobb mikrovezérlőnél a soros kommunikációt is tudjuk használni. A s.py modul támogatja a több shift register sorbakötését is. A WebREPL nem támogatja az ékezetes betűket, a megjegyzéseimet ne használjuk a kódokban.
 
 > 8 bit ki/be kapcsolása
 
@@ -7,7 +7,7 @@ Fontos tudnunk, ha az ESP-01 microvezérlőt használjuk, nem működik a soros 
 from s import*
 kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 ```
-> A megjelenítés legegyszerűbb módja (a ctrl+E segitségével több parancssort tudunk egyszerre bemásolni a WebREPL-be)
+> A megjelenítés legegyszerűbb módja (a ctrl+E segitségével 10 parancssort tudunk egyszerre bemásolni a WebREPL-be)
 
 ```python
 from s import*
@@ -21,7 +21,30 @@ kiir('00100100');sleep_ms(250)
 kiir('00011000');sleep_ms(250)
 kiir('00000000')
 ```
-
+> Egymást lögdöső bitek
+```python
+from s import*
+from time import*
+kiir('00000000');sleep_ms(250)
+kiir('00000001');sleep_ms(250)
+kiir('00000010');sleep_ms(250)
+kiir('00000100');sleep_ms(250)
+kiir('00000101');sleep_ms(100)
+kiir('00000110');sleep_ms(100)
+kiir('00001010');sleep_ms(250)
+kiir('00010010');sleep_ms(250)
+kiir('00010100');sleep_ms(100)
+kiir('00011000');sleep_ms(100)
+kiir('00101000');sleep_ms(250)
+kiir('01001000');sleep_ms(250)
+kiir('01010000');sleep_ms(100)
+kiir('01100000');sleep_ms(100)
+kiir('10100000');sleep_ms(250)
+kiir('00100000');sleep_ms(100)
+kiir('01000000');sleep_ms(100)
+kiir('10000000');sleep_ms(100)
+kiir('00000000');sleep_ms(100)
+```
 > Bitek görgetése előre vagy hátra
 
 ```python
