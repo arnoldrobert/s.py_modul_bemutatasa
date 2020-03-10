@@ -25,25 +25,26 @@ kiir('00000000')
 ```python
 from s import*
 from time import*
-kiir('00000000');sleep_ms(250)
-kiir('00000001');sleep_ms(250)
-kiir('00000010');sleep_ms(250)
-kiir('00000100');sleep_ms(250)
-kiir('00000101');sleep_ms(100)
-kiir('00000110');sleep_ms(100)
-kiir('00001010');sleep_ms(250)
-kiir('00010010');sleep_ms(250)
-kiir('00010100');sleep_ms(100)
-kiir('00011000');sleep_ms(100)
-kiir('00101000');sleep_ms(250)
-kiir('01001000');sleep_ms(250)
-kiir('01010000');sleep_ms(100)
-kiir('01100000');sleep_ms(100)
-kiir('10100000');sleep_ms(250)
-kiir('00100000');sleep_ms(100)
-kiir('01000000');sleep_ms(100)
-kiir('10000000');sleep_ms(100)
-kiir('00000000');sleep_ms(100)
+x=0
+bit=['00000000','00000001','00000010','00000010','00000100','00000101','00000110','00001010','00010010','00010100','00011000','00101000','01001000','01010000','01100000','10100000','00100000','01000000','10000000','00000000']
+for i in bit:
+  if x<4:
+    t=250
+  elif x>=4 and x<6:
+    t=100
+  elif x>=6 and x<8:
+    t=250
+  elif x>=8 and x<10:
+    t=100
+  elif x>=10 and x<12:
+    t=250
+  elif x>=12 and x<14:
+    t=100
+  elif x==14:
+    t=250
+  elif x>14:
+    t=100
+  kiir(bit);sleep_ms(x)
 ```
 > Bitek görgetése előre vagy hátra
 
@@ -64,7 +65,7 @@ from s import*
 kiir('00000001')
 gorget('H',8,350) # 'H'-előre, 8-léptetés, 350 ms késleltetéssel
 ```
-A shift register amikor előre lépkedünk, 8. bit után túlcsordul (ha egy shift register-t használunk). Az s.py modult úgy írtam meg, hogy visszafelé is ezt imitálja, vagyis hátrafelé is túlcsordul. A következő példában illusztrálom ezt.
+A shift register amikor előre lépkedünk, 8. bit után túlcsordul (ha 1 shift register-t használunk). Az s.py modult úgy írtam meg, hogy visszafelé is ezt imitálja, vagyis hátrafelé is túlcsordul. A következő példában illusztrálom ezt.
 
 > Lögdössük ki a biteket
 
