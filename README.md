@@ -31,21 +31,9 @@ bit=['00000000','00000001','00000010','00000100','00000101','00000110'\
      ,'01010000','01100000','10100000','00100000','01000000','10000000']
 while True:
     for i in bit:
-        if x<3:
-            t=250
-        elif x>=3 and x<5:
-            t=100
-        elif x>=5 and x<7:
-            t=250
-        elif x>=7 and x<9:
-            t=100
-        elif x>=9 and x<11:
-            t=250
-        elif x>=11 and x<13:
-            t=100
-        elif x==13:
-            t=250
-        elif x>13:
+        if x<3 or x>=5 and x<7 or x>=9 and x<11 or x==13:
+            t=300
+        elif x>=3 and x<5 or x>=7 and x<9 or x>=11 and x<13 or x>13:
             t=100
         kiir(i);sleep_ms(t)
         x+=1
