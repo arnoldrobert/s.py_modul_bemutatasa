@@ -37,7 +37,7 @@ while True:
             t=100
         elif x>=5 and x<7:
             t=250
-        elif x>=7 and x<9;
+        elif x>=7 and x<9:
             t=100
         elif x>=9 and x<11:
             t=250
