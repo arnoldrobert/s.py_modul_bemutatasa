@@ -99,4 +99,19 @@ for i in range(8):
     gorget(x,7-i,200-i*15)
 kiir('00000000')
 ```
+> Több shift registert is összeköthetünk, mégpedig az első register QH lábát a második register SER lábával, valamint kössük össze az RCLK és az SRCLK lábakat is. Ime az előző példa kettő shift registerrel sorba kötve.
+
+```python
+from s import*
+from time import*
+kiir('0000000000000001')
+for i in range(16):
+    if i%2==0:
+        x='H'
+    if i%2!=0:
+        x='E'
+    gorget(x,15-i,200-i*15)
+kiir('0000000000000000')
+```
+
 ### Lehetőségek egész tárházát adja ez a modul, csak a kreatívitásunkon múlik mit hozunk ki belőle, üdv a bithegyeken túlról.
