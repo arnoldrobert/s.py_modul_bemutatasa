@@ -43,12 +43,14 @@ while True:
 > Bitek be- és kicsorgása
 
 ```python
+from s import*
+from time import*
 for i in range(1,9):
-    x=(8-i)*'0'+i*'1'
-    print(x)
+    z=(8-i)*'0'+i*'1'
+    kiir(z);sleep_ms(150)
 for i in range(1,9):
     z=(8-i)*'1'+i*'0'
-    print(z)
+    kiir(z);sleep_ms(150)
 ```
 > Bitek görgetését a "gorget()" fügvénnyel végezhetjük. Az argumentumában beállíthatjuk, hogy "E" - előre, "H" - hátra, a léptetés számát és a késleltetés idejét ms-ban.
 
