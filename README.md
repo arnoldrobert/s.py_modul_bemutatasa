@@ -85,3 +85,18 @@ for i in range(9):  # felváltva lépked előre hátra és lögdösi ki a bit-ke
     x = 'H'
   gorget(x,i,250)
 ```
+> Bitek oda-vissza befelé gyorsulva
+
+```python
+from s import*
+from time import*
+kiir('00000001')
+for i in range(8):
+    if i%2==0:
+        x='H'
+    if i%2!=0:
+        x='E'
+    gorget(x,7-i,200-i*15)
+kiir('00000000')
+```
+##Lehetőségek egész tárházát adja ez a modul, aminek csak a kreativitáson múlik
