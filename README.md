@@ -40,7 +40,17 @@ while True:
         if x>19:
             x=0
 ```
-> Bitek görgetése előre vagy hátra
+> Bitek be- és kicsorgása
+
+```python
+for i in range(1,9):
+    x=(8-i)*'0'+i*'1'
+    print(x)
+for i in range(1,9):
+    z=(8-i)*'1'+i*'0'
+    print(z)
+```
+> Bitek görgetését a "gorget()" fügvénnyel végezhetjük. Az argumentumában beállíthatjuk, hogy "E" - előre, "H" - hátra, a léptetés számát és a késleltetés idejét ms-ban.
 
 ```python
 gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés széma, 350 ms késleltetés
