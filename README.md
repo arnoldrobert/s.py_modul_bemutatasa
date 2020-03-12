@@ -99,4 +99,4 @@ for i in range(8):
     gorget(x,7-i,200-i*15)
 kiir('00000000')
 ```
-## Lehetőségek egész tárházát adja ez a modul, aminek csak a kreativitáson múlik
+### Lehetőségek egész tárházát adja ez a modul, ami csak a kreatívitásunkon múlik
