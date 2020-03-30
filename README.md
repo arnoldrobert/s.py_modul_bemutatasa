@@ -7,7 +7,7 @@ Fontos tudnunk, ha az ESP-01 microvezérlőt használjuk, nem működik a soros 
 from s import*
 kiir('10101010')  # '0'-kikapcsolt, '1'-bekapcsolt állapot
 ```
-> A megjelenítés legegyszerűbb módja (a ctrl+E segitségével 10 parancssort tudunk egyszerre bemásolni a WebREPL-be)
+> A megjelenítés legegyszerűbb módja (a ctrl+E segítségével 10 parancssort tudunk egyszerre bemásolni a WebREPL-be)
 
 ```python
 from s import*
@@ -52,10 +52,10 @@ for i in range(1,9):
     z=(8-i)*'1'+i*'0'
     kiir(z);sleep_ms(150)
 ```
-> Bitek görgetését a "gorget()" fügvénnyel végezhetjük. Az argumentumában beállíthatjuk, hogy "E" - előre, "H" - hátra, a léptetés számát és a késleltetés idejét ms-ban.
+> Bitek görgetését a "gorget()" függvénnyel végezhetjük. Az argumentumában beállíthatjuk, hogy "E" - előre, "H" - hátra, a léptetés számát és a késleltetés idejét ms-ban.
 
 ```python
-gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés széma, 350 ms késleltetés
+gorget('E',8,350) # 'E'-előre, 'H'-hátra, 8-léptetés száma, 350 ms késleltetés
 ```
 > 1 bit előre görgetése
 
@@ -73,12 +73,12 @@ gorget('H',8,350) # 'H'-előre, 8-léptetés, 350 ms késleltetéssel
 ```
 A shift register amikor előre lépkedünk, 8. bit után túlcsordul (ha 1 shift register-t használunk). Az s.py modult úgy írtam meg, hogy visszafelé is ezt imitálja, vagyis hátrafelé is túlcsordul. A következő példában illusztrálom ezt.
 
-> Lögdössük ki a biteket
+> Lökdössük ki a biteket
 
 ```python
 from s import*
 kiir('11111111')    # '1'-bekapcsolt állapot
-for i in range(9):  # felváltva lépked előre hátra és lögdösi ki a bit-ket
+for i in range(9):  # felváltva lépked előre hátra és lökdösi ki a bit-ket
   if i % 2 == 0:
     x = 'E'
   elif i % 2 != 0:
@@ -99,7 +99,7 @@ for i in range(8):
     gorget(x,7-i,200-i*15)
 kiir('00000000')
 ```
-> Több shift registert is összeköthetünk, mégpedig az első register QH lábát a második register SER lábával, valamint kössük össze az RCLK és az SRCLK lábakat is. Ime az előző példa kettő shift registerrel sorba kötve.
+> Több shift registert is össze köthetünk, mégpedig az első register QH lábát a második register SER lábával, valamint kössük össze az RCLK és az SRCLK lábakat is. Íme az előző példa kettő shift registerrel sorba kötve.
 
 ```python
 from s import*
@@ -114,4 +114,4 @@ for i in range(16):
 kiir('0000000000000000')
 ```
 
-### Lehetőségek egész tárházát adja ez a modul, csak a kreatívitásunkon múlik mit hozunk ki belőle, üdv a bithegyeken túlról.
+### Lehetőségek egész tárházát adja ez a modul, csak a kreativitásunkon múlik mit hozunk ki belőle, üdv a bit hegyeken túlról.
