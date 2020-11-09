@@ -69,7 +69,7 @@ gorget('E',8,350) # 'E'-előre, 8-léptetés, 350 ms késleltetéssel
 ```python
 from s import*
 kiir('00000001')
-gorget('H',8,350) # 'H'-előre, 8-léptetés, 350 ms késleltetéssel
+gorget('H',8,350) # 'H'-hátra, 8-léptetés, 350 ms késleltetéssel
 ```
 A shift register amikor előre lépkedünk, 8. bit után túlcsordul (ha 1 shift register-t használunk). Az s.py modult úgy írtam meg, hogy visszafelé is ezt imitálja, vagyis hátrafelé is túlcsordul. A következő példában illusztrálom ezt.
 
