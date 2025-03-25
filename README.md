@@ -114,4 +114,4 @@ for i in range(16):
 kiir('0000000000000000')
 ```
 
-### Lehetőségek egész tárházát adja ez a modul, csak a kreativitásunkon múlik mit hozunk ki belőle, üdv a bit hegyeken túlról.
+# Lehetőségek egész tárházát adja ez a modul, csak a kreativitásunkon múlik mit hozunk ki belőle, üdv a bit hegyeken túlról.
